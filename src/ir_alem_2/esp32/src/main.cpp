@@ -9,7 +9,7 @@
 
 SensorDHT22 sensor_dht22 = {5, DHT22}; // Pino 5, Tipo DHT22
 
-PainelLCD painel_lcd = {0x27, 16, 2, 21, 22};
+PainelLCD painel_lcd = {0x27, 16, 2, 21, 22}; // Endereço I2C 0x27, 16 colunas, 2 linhas, pinos SDA 21, SCL 22
 
 SensorLDR sensor_ldr = {4, 3.3, 10000}; // Pino 34, VCC 3.3V, Resistor 10k ohms
 
