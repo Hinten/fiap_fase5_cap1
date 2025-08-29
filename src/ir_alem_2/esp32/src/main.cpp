@@ -4,8 +4,8 @@
 #include "painel_lcd/painel.h"
 #include "sensores/sensor_dht22/sensor_dht22.h"
 #include <DHT.h>
-#include <sensores/sensor_ldr/sensor_ldr.h>
-#include <sensores/sensor_umidade_solo/sensor_umidade_solo.h>
+#include "sensores/sensor_ldr/sensor_ldr.h"
+#include "sensores/sensor_umidade_solo/sensor_umidade_solo.h"
 
 SensorDHT22 sensor_dht22 = {5, DHT22}; // Pino 5, Tipo DHT22
 
