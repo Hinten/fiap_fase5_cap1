@@ -1,6 +1,6 @@
 from base.leitura_request import LeituraRequest
-from packages.database.models.sensor import TipoSensorEnum, TipoSensor, Sensor, LeituraSensor
-from packages.database.tipos_base.database import Database
+from database.models.sensor import TipoSensorEnum, TipoSensor, Sensor, LeituraSensor
+from database.tipos_base.db import Database
 from datetime import datetime
 from fastapi import APIRouter
 

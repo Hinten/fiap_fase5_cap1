@@ -1,5 +1,5 @@
 import logging
-from packages.database.tipos_base.database import Database
+from database.tipos_base.db import Database
 import streamlit as st
 
 def setup():

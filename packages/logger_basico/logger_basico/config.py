@@ -1,8 +1,9 @@
 import logging
 import os
 
-from src.logger.color_text import makeCyan, makeBlue, makeYellow, makeRed, makePink
-from src.settings import DEBUG
+from logger_basico.color_text import makeCyan, makeBlue, makeYellow, makeRed, makePink
+
+DEBUG = os.environ.get("DEBUG", "true").lower() == "true"
 
 LOGGER_COLORS = {
     logging.DEBUG: makeCyan,

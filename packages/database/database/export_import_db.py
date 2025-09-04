@@ -1,9 +1,9 @@
 from sqlalchemy.exc import DatabaseError
-from dynamic_import import import_models, get_model_by_table_name
+from database.dynamic_import import import_models, get_model_by_table_name
 import io
 import zipfile
 import pandas as pd
-from tipos_base.model import Model
+from database.tipos_base.model import Model
 from typing import List
 
 

@@ -9,7 +9,7 @@ import os
 
 from sqlalchemy.sql.ddl import CreateTable
 
-SQL_ALCHEMY_DEBUG = False
+SQL_ALCHEMY_DEBUG = os.environ.get('SQL_ALCHEMY_DEBUG', 'false').lower() == 'true'
 
 DEFAULT_DSN = "oracle.fiap.com.br:1521/ORCL"
 

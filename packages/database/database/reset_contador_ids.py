@@ -1,5 +1,5 @@
-from dynamic_import import import_models
-from tipos_base.db import Database
+from database.dynamic_import import import_models
+from database.tipos_base.db import Database
 from sqlalchemy import text
 import logging
 

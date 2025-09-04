@@ -7,7 +7,7 @@ from ..dashboard.modelo_preditivo.exploracao_de_dados import exploracao_de_dados
 from ..dashboard.modelo_preditivo.previsoes import previsao_manual_page
 from ..dashboard.principal import get_principal_page
 from ..dashboard.generic.table_view import TableView
-from packages.database.dynamic_import import import_models
+from database.dynamic_import import import_models
 from ..dashboard.menu import menu
 
 

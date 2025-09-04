@@ -1,1 +1,0 @@
-SQL_ALCHEMY_DEBUG = False
