@@ -28,8 +28,6 @@
 
 Este projeto tem como objetivo compreender o funcionamento da computação em nuvem e justificar a escolha de recursos adequados para hospedar uma aplicação simples utilizando a AWS (Amazon Web Services). Durante a atividade, exploramos diferentes serviços da AWS, estimamos custos e comparamos preços entre regiões distintas para fundamentar a tomada de decisão.
 
-Nosso foco foi criar uma arquitetura mínima, mas funcional, capaz de hospedar uma aplicação web com armazenamento persistente e custos mensais acessíveis.
-
 Com a API e os modelos de Machine Learning prontos, foi necessário estimar os custos de execução na nuvem AWS.  
 Para isso, foi utilizada a **AWS Pricing Calculator** com a seguinte configuração:
 
