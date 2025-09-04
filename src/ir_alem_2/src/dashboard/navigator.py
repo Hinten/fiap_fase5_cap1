@@ -1,14 +1,12 @@
 import streamlit as st
-
-from ..dashboard.database.exportar import exportar_db_page
-from ..dashboard.database.importar import importar_db_page
-from ..dashboard.global_messages import get_global_messages
-from ..dashboard.modelo_preditivo.exploracao_de_dados import exploracao_de_dados
-from ..dashboard.modelo_preditivo.previsoes import previsao_manual_page
-from ..dashboard.principal import get_principal_page
-from ..dashboard.generic.table_view import TableView
 from database.dynamic_import import import_models
-from ..dashboard.menu import menu
+from dashboard_streamlit.generic.table_view import TableView
+from dashboard_streamlit.global_messages import get_global_messages
+from dashboard_streamlit.database.exportar import exportar_db_page
+
+from dashboard_streamlit.database.importar import importar_db_page
+from src.ir_alem_2.src.dashboard.principal import get_principal_page
+from src.ir_alem_2.src.dashboard.menu import menu
 
 
 def get_generic_pages() -> list:
@@ -41,8 +39,6 @@ def navigation():
         *get_generic_pages(),
         exportar_db_page,
         importar_db_page,
-        exploracao_de_dados,
-        previsao_manual_page,
     ])
 
     menu()

@@ -1,7 +1,9 @@
 import logging
 import os
 import streamlit as st
-from packages.api.api_basica import inciar_api_thread_paralelo
+
+from src.ir_alem_2.src.api.api_basica import inciar_api_thread_paralelo
+
 
 def iniciar_api_sensor():
 

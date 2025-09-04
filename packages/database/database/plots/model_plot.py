@@ -1,12 +1,12 @@
 import matplotlib.pyplot as plt
 from sqlalchemy import BinaryExpression
-from generic.grafico_degrau import grafico_degrau_generico
-from generic.grafico_barras import grafico_barras_generico
-from generic.grafico_linha import get_grafico_linha
+
+from database.plots.generic.grafico_barras import grafico_barras_generico
+from database.plots.generic.grafico_degrau import grafico_degrau_generico
+from database.plots.generic.grafico_linha import get_grafico_linha
+from database.plots.plot_config import TipoGrafico
 from database.tipos_base.model import Model
 import pandas as pd
-
-from plot_config import TipoGrafico
 
 
 class ModelPlotter:

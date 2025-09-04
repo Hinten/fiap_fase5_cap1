@@ -1,7 +1,8 @@
 from fastapi import FastAPI
 import uvicorn
 import threading
-from init_sensor import init_router
+
+from src.ir_alem_2.src.api.init_sensor import init_router
 
 app = FastAPI()
 app.include_router(init_router, prefix='/init')

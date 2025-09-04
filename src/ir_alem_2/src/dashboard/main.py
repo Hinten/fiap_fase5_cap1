@@ -1,12 +1,12 @@
 import logging
 import os
-
-from ..dashboard.api_sensor import iniciar_api_sensor
-from ..dashboard.login import login_view, login_sqlite
 import streamlit as st
-from ..dashboard.navigator import navigation
-from ..dashboard.setup import setup
-from ..logger.config import configurar_logger
+
+from dashboard_streamlit.login import login_sqlite, login_view
+from logger_basico.config import configurar_logger
+from src.ir_alem_2.src.dashboard.api_sensor import iniciar_api_sensor
+from src.ir_alem_2.src.dashboard.navigator import navigation
+from src.ir_alem_2.src.dashboard.setup import setup
 
 
 def main():
