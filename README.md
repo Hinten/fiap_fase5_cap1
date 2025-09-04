@@ -28,6 +28,36 @@
 
 *Descreva seu projeto com base no texto do PBL (até 600 palavras)*
 
+Com a API e os modelos de Machine Learning prontos, foi necessário estimar os custos de execução na nuvem AWS.  
+Para isso, foi utilizada a **AWS Pricing Calculator** com a seguinte configuração:
+
+- **2 vCPUs**
+- **1 GiB de memória**
+- **Até 5 Gigabit de rede**
+- **50 GB de armazenamento HDD (EBS sc1)**
+- **Linux**
+- **On-Demand (100%)**
+
+**Comparação de Custos por Região:**
+
+| Região                   | Custo Mensal (On-Demand) | Upfront |
+|--------------------------|--------------------------|---------|
+| **US East (N. Virginia)** | **USD 6.88**             | 0       |
+| **South America (São Paulo)** | **USD 11.22**            | 0       |
+
+📊 **Conclusão**:  
+- N. Virginia é ~40% mais barato.  
+- São Paulo é mais caro, mas essencial em casos de **restrições legais** ou **necessidade de baixa latência** no Brasil.
+
+---
+
+#### 📈 Gráfico Comparativo
+![Comparação de custos](aws-cost-compare.png)
+
+#### 🎥 Vídeos Explicativos
+- **Entrega 1 (Machine Learning):** [Link do Vídeo no YouTube](URL_DO_VIDEO_AQUI) *(não listado)*  
+- **Entrega 2 (AWS Cloud):** [Link do Vídeo no YouTube](URL_DO_VIDEO_AQUI) *(não listado)*  
+
 
 ## 📁 Estrutura de pastas
 
