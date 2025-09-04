@@ -5,6 +5,7 @@ from dashboard_streamlit.global_messages import get_global_messages
 from dashboard_streamlit.database.exportar import exportar_db_page
 
 from dashboard_streamlit.database.importar import importar_db_page
+from src.ir_alem_2.src.dashboard.pages.previsao import previsao_manual_page
 from src.ir_alem_2.src.dashboard.pages.principal import get_principal_page
 from src.ir_alem_2.src.dashboard.menu import menu
 
@@ -39,6 +40,7 @@ def navigation():
         *get_generic_pages(),
         exportar_db_page,
         importar_db_page,
+        previsao_manual_page,
     ])
 
     menu()

@@ -3,7 +3,7 @@ import os
 
 from logger_basico.color_text import makeCyan, makeBlue, makeYellow, makeRed, makePink
 
-DEBUG = os.environ.get("DEBUG", "true").lower() == "true"
+DEBUG = os.environ.get("DEBUG", "false").lower() == "true"
 
 LOGGER_COLORS = {
     logging.DEBUG: makeCyan,
@@ -42,7 +42,8 @@ def configurar_logger(file_name: str = 'app.log', level: int = None):
 
     logger = logging.getLogger()
 
-    level = level or logging.DEBUG if DEBUG else logging.INFO
+    # Corrigindo precedência para definir o nível corretamente
+    level = level if level is not None else (logging.DEBUG if DEBUG else logging.INFO)
 
     logger.setLevel(level)
 

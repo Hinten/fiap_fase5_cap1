@@ -4,6 +4,7 @@ from dashboard_streamlit.generic.table_view import TableView
 from dashboard_streamlit.database.exportar import exportar_db_page
 
 from dashboard_streamlit.database.importar import importar_db_page
+from src.ir_alem_2.src.dashboard.pages.previsao import previsao_manual_page
 
 from src.ir_alem_2.src.dashboard.pages.principal import get_principal_page
 
@@ -52,6 +53,7 @@ def menu():
     """
 
     st.sidebar.page_link(get_principal_page())
+    st.sidebar.page_link(previsao_manual_page)
     crud_menu()
     export_import_menu()
 
