@@ -5,7 +5,7 @@ from dashboard_streamlit.database.exportar import exportar_db_page
 
 from dashboard_streamlit.database.importar import importar_db_page
 
-from src.ir_alem_2.src.dashboard.principal import get_principal_page
+from src.ir_alem_2.src.dashboard.pages.principal import get_principal_page
 
 
 def crud_menu():

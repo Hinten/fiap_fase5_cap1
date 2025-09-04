@@ -34,13 +34,14 @@ class Api
     const String baseUrl; // Exemplo: "http://api.example.com" sem barra no final
     const String initUrl; // Exemplo: "/init"
     const String leituraUrl; // Exemplo: "/leitura"
+    const String saudeUrl; // Exemplo: "/saude"
     String chipIdStr;
     ConexaoWifi conexao;
     PainelLCD* lcd;
 
 public:
-    Api(String  baseUrl, String  initUrl, String  leituraUrl, const ConexaoWifi& conexao, PainelLCD* lcd = nullptr, const String& chipIdStr = "")
-    : baseUrl(std::move(baseUrl)), initUrl(std::move(initUrl)), leituraUrl(std::move(leituraUrl)), chipIdStr(chipIdStr), conexao(conexao), lcd(lcd) {
+    Api(String  baseUrl, String  initUrl, String leituraUrl, String saudeUrl, const ConexaoWifi& conexao, PainelLCD* lcd = nullptr, const String& chipIdStr = "")
+    : baseUrl(std::move(baseUrl)), initUrl(std::move(initUrl)), leituraUrl(std::move(leituraUrl)), saudeUrl(std::move(saudeUrl)), chipIdStr(chipIdStr), conexao(conexao), lcd(lcd) {
 
         if (chipIdStr.isEmpty()) {
             uint64_t chipid = ESP.getEfuseMac();
@@ -123,6 +124,12 @@ public:
     {
         json["serial"] = chipIdStr; // Adiciona o Chip ID ao JSON
         return post_json(leituraUrl, json);
+    }
+
+    Response post_saude(JsonDocument& json)
+    {
+        json["serial"] = chipIdStr; // Adiciona o Chip ID ao JSON
+        return post_json(saudeUrl, json);
     }
 
 

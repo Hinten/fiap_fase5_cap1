@@ -3,11 +3,13 @@ import uvicorn
 import threading
 
 from src.ir_alem_2.src.api.init_sensor import init_router
+from src.ir_alem_2.src.api.prever_saude_planta import saude_router
 from src.ir_alem_2.src.api.receber_leitura import receber_router
 
 app = FastAPI()
 app.include_router(init_router, prefix='/init')
 app.include_router(receber_router, prefix='/leitura')
+app.include_router(saude_router, prefix='/saude')
 
 def _print_routes(app):
     for route in app.routes:
