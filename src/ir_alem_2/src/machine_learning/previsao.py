@@ -23,6 +23,7 @@ def fazer_previsao(
         "melhor_modelo.pkl"
     )
 
+
     if not os.path.exists(pipeline_path):
         raise FileNotFoundError(f"Modelo não encontrado no caminho: {pipeline_path}")
 
@@ -36,8 +37,6 @@ def fazer_previsao(
 
 
 
-
-
 if __name__ == "__main__":
 
     modelo_path = os.path.join(
@@ -48,8 +47,7 @@ if __name__ == "__main__":
 
     modelo = joblib.load(modelo_path)
 
-    print(modelo.column_names)
-    print(modelo.predict_name)
+    print(modelo.feature_names_in_) #aparece apenas quando tem um pipeline
 
     entrada = pd.DataFrame([[30.0, 25.0, 80.0, 300.0]], columns=modelo.column_names)
 

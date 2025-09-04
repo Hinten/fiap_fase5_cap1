@@ -8,6 +8,10 @@ def _principal():
 
     leituras = LeituraSensor.as_dataframe_all()
 
+    if leituras.empty:
+        st.warning("Nenhuma leitura de sensor disponível.")
+        return
+
     # Buscar os tipos de sensores para cada leitura
     # Supondo que leituras tenha sensor_id
     sensores = Sensor.as_dataframe_all()[['id', 'tipo_sensor_id']]
