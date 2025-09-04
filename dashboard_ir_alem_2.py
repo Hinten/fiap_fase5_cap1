@@ -1,4 +1,4 @@
-from src.dashboard.main import main as dashboard_main
+from src.ir_alem_2.src.dashboard.main import main as dashboard_main
 from dotenv import load_dotenv
 
 
@@ -8,7 +8,7 @@ def main():
     """
     Função principal do aplicativo Streamlit.
     para rodar o aplicativo, execute o seguinte comando:
-    streamlit run main_dash.py
+    streamlit run dashboard_ir_alem_2.py
     """
     load_dotenv()
 

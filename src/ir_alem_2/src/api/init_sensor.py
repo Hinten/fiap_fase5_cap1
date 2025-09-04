@@ -10,6 +10,7 @@ init_router = APIRouter()
 class InitSensorRequest(BaseModel):
     serial: str
 
+@init_router.post('')
 @init_router.post('/')
 def init_sensor(request:InitSensorRequest):
     """

@@ -14,13 +14,13 @@ SensorDHT22 sensor_dht22 = {5, DHT22}; // Pino 5, Tipo DHT22
 
 PainelLCD painel_lcd = {0x27, 16, 2, 21, 22}; // Endereço I2C 0x27, 16 colunas, 2 linhas, pinos SDA 21, SCL 22
 
-SensorLDR sensor_ldr = {4, 3.3, 10000}; // Pino 4, VCC 3.3V, Resistor 10k ohms
+SensorLDR sensor_ldr = {32, 3.3, 10000}; // Pino 4, VCC 3.3V, Resistor 10k ohms
 
-SensorUmidadeSolo sensor_umidade_solo = {2, 4095, 0}; // Pino 2, valor seco 4095, valor úmido 0
+SensorUmidadeSolo sensor_umidade_solo = {33, 4095, 0}; // Pino 2, valor seco 4095, valor úmido 0
 
 ConexaoWifi conexao_wifi = {NETWORK_SSID, NETWORK_PASSWORD, &painel_lcd, 10000}; // Substitua por seu SSID e senha
 
-Api api = {API_BASE_URL, API_LEITURA_URL, conexao_wifi, &painel_lcd}; // Substitua pela URL base da sua API
+Api api = {API_BASE_URL, API_INIT_URL, API_LEITURA_URL, conexao_wifi, &painel_lcd}; // Substitua pela URL base da sua API
 
 String convertFloatToString(const float& value, const uint8_t decimalPlaces = 2)
 {
@@ -41,6 +41,7 @@ struct SensorData
     float soil_humidity;
 } sensor_data = {NAN, NAN, NAN, NAN};
 
+bool enviar_init = true;
 bool enviar_dados = false;
 
 void primaryTask()
@@ -48,6 +49,7 @@ void primaryTask()
     const auto temperature = sensor_dht22.getTemperature();
     const auto humidity = sensor_dht22.getHumidity();
     const auto lux = sensor_ldr.read_lux();
+    
     const auto solo_humidity = sensor_umidade_solo.read_humidity();
 
     sensor_data = {temperature, humidity, lux, solo_humidity};
@@ -71,9 +73,29 @@ void secondaryTask()
     } else
     {
 
+        if (enviar_init)
+        {
+            painel_lcd.printLCDSerial(0, 0, "Iniciando sensor");
+            painel_lcd.printLCDSerial(0, 1, "na API");
+            auto response = api.post_init();
+            if (response.status_code == 200 || response.status_code == 201)
+            {
+                painel_lcd.printLCDSerial(0, 0, "Sensor iniciado");
+                enviar_init = false;
+            } else
+            {
+                painel_lcd.printLCDSerial(0, 0, "Erro ao iniciar");
+                painel_lcd.printLCDSerial(0, 1, "sensor na API");
+            }
+        }
+
+        if (enviar_init)
+        {
+            return; // Não tenta enviar dados se o init falhou
+        }
+
         if (!enviar_dados)
         {
-            painel_lcd.printLCDSerial(0, 0, "Dados já enviados");
             return;
         }
 
@@ -93,6 +115,7 @@ void secondaryTask()
         } else
         {
             painel_lcd.printLCDSerial(0, 0, "Erro ao enviar dados");
+            enviar_init = true; // Tenta reiniciar o sensor na próxima vez
         }
     }
 }

@@ -7,6 +7,8 @@
 #include <Wire.h>
 #include <HTTPClient.h>
 #include <ArduinoJson.h>
+
+#include <utility>
 #include "../conexao_wifi/conexao_wifi.h"
 
 struct Response
@@ -30,13 +32,24 @@ struct Response
 class Api
 {
     const String baseUrl; // Exemplo: "http://api.example.com" sem barra no final
+    const String initUrl; // Exemplo: "/init"
     const String leituraUrl; // Exemplo: "/leitura"
+    String chipIdStr;
     ConexaoWifi conexao;
     PainelLCD* lcd;
 
 public:
-    Api(const String& baseUrl, const String& leituraUrl, const ConexaoWifi& conexao, PainelLCD* lcd = nullptr)
-    : baseUrl(baseUrl), leituraUrl(leituraUrl), conexao(conexao), lcd(lcd) {}
+    Api(String  baseUrl, String  initUrl, String  leituraUrl, const ConexaoWifi& conexao, PainelLCD* lcd = nullptr, const String& chipIdStr = "")
+    : baseUrl(std::move(baseUrl)), initUrl(std::move(initUrl)), leituraUrl(std::move(leituraUrl)), chipIdStr(chipIdStr), conexao(conexao), lcd(lcd) {
+
+        if (chipIdStr.isEmpty()) {
+            uint64_t chipid = ESP.getEfuseMac();
+            char buffer[17]; // 16 caracteres + null terminator
+            sprintf(buffer, "%016llX", chipid);
+            this->chipIdStr = String(buffer);
+        }
+
+    }
 
     Response get(const String &path) {
         if (!conexao.estaConectado()) {
@@ -99,8 +112,16 @@ public:
         return post(path, jsonStr, "application/json");
     }
 
-    Response post_leitura(const JsonDocument& json)
+    Response post_init()
     {
+        JsonDocument doc;
+        doc["serial"] = chipIdStr; // Adiciona o Chip ID ao JSON
+        return post_json(initUrl, doc);
+    }
+
+    Response post_leitura(JsonDocument& json)
+    {
+        json["serial"] = chipIdStr; // Adiciona o Chip ID ao JSON
         return post_json(leituraUrl, json);
     }
 

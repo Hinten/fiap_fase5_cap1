@@ -29,6 +29,7 @@ public:
     {
         const int adc = analogRead(LDR_PIN);
 
+        
         if (isnan(adc))
         {
             return NAN;
