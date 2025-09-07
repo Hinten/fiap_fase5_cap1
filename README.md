@@ -51,8 +51,13 @@ Para isso, foi utilizada a **AWS Pricing Calculator** com a seguinte configuraç
 
 ---
 
-#### 📈 Gráfico Comparativo
-![Comparação de custos](aws-cost-compare.png)
+#### 📑 Exportações Oficiais da Calculadora AWS
+- [PDF Estimativa N. Virginia](exports/aws-n-virginia.pdf)
+- [PDF Estimativa São Paulo](exports/aws-sao-paulo.pdf)
+
+*(Esses PDFs foram gerados diretamente no **AWS Pricing Calculator**, garantindo a rastreabilidade dos valores apresentados.)*
+
+---
 
 #### 🎥 Vídeos Explicativos
 - **Entrega 1 (Machine Learning):** [Link do Vídeo no YouTube](URL_DO_VIDEO_AQUI) *(não listado)*  
