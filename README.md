@@ -11,17 +11,17 @@
 ## Nome do grupo
 
 ## 👨‍🎓 Integrantes: 
-- <a href="https://www.linkedin.com/company/inova-fusca">Nome do integrante 1</a>
-- <a href="https://www.linkedin.com/company/inova-fusca">Nome do integrante 2</a>
-- <a href="https://www.linkedin.com/company/inova-fusca">Nome do integrante 3</a> 
-- <a href="https://www.linkedin.com/company/inova-fusca">Nome do integrante 4</a> 
-- <a href="https://www.linkedin.com/company/inova-fusca">Nome do integrante 5</a>
+- <a href="">Alice C. M. Assis - RM 566233</a>
+- <a href="">Leonardo S. Souza - RM 563928</a>
+- <a href="">Lucas B. Francelino - RM 561409</a>
+- <a href="">Pedro L. T. Silva - RM 561644</a>
+- <a href="">Vitor A. Bezerra - RM 563001</a>
 
 ## 👩‍🏫 Professores:
 ### Tutor(a) 
-- <a href="https://www.linkedin.com/company/inova-fusca">Nome do Tutor</a>
+- <a href="proflucas.moreira@fiap.com.br">Lucas Gomes Moreira</a>
 ### Coordenador(a)
-- <a href="https://www.linkedin.com/company/inova-fusca">Nome do Coordenador</a>
+- <a href="profandre.chiovato@fiap.com.br">André Godoi Chiovato</a>
 
 
 ## 📜 Descrição
