@@ -23,6 +23,72 @@
 ### Coordenador(a)
 - <a href="profandre.chiovato@fiap.com.br">André Godoi Chiovato</a>
 
+# Entrega 1 – Análise e Predição de Rendimento Agrícola
+
+## Descrição
+Este projeto tem como objetivo analisar dados de rendimento agrícola, identificar padrões e outliers, e construir modelos preditivos para estimar a produtividade das safras. O fluxo inclui análise exploratória, clusterização e modelagem preditiva com cinco algoritmos diferentes.
+
+---
+
+## Estrutura do Projeto
+- `crop_yield.csv` – Base de dados com informações sobre rendimento das plantações.
+- `Entrega1_Analise_Predicao.ipynb` – Notebook com código completo, visualizações e modelagem.
+
+---
+
+## Tecnologias e Bibliotecas
+- **Python 3**
+- Bibliotecas:
+  - `numpy`
+  - `pandas`
+  - `matplotlib`
+  - `seaborn`
+  - `scikit-learn`
+  - `hdbscan`
+  - `pycaret`  
+
+---
+
+## Etapas do Projeto
+
+### 1. Análise Exploratória de Dados (EDA)
+- Inspeção do dataset (`head`, `shape`, `columns`, `sample`).
+- Visualizações:
+  - Pairplots para explorar relações entre variáveis.
+  - Boxplots para identificar outliers.
+- Objetivo: compreender padrões, tendências e inconsistências nos dados.
+
+### 2. Clusterização e Identificação de Outliers
+- Algoritmo: **HDBSCAN** aplicado a colunas numéricas.
+- Visualização de clusters para identificar agrupamentos naturais e outliers.
+
+### 3. Modelagem Preditiva
+- Pré-processamento automatizado com **PyCaret**.
+- Objetivo: prever a variável `Yield` (rendimento da safra).
+- Divisão treino/teste: 80/20.
+- Treinamento de cinco modelos de regressão distintos.
+
+### 4. Seleção e Avaliação dos Melhores Modelos
+- Métrica principal: **R² score**.
+- Outras métricas: **RMSE** e **MAE**.
+- Visualizações:
+  - Gráficos de erro
+  - Importância das variáveis
+
+### 5. Conclusão
+- O fluxo completo permitiu identificar padrões, outliers e construir modelos robustos de previsão de rendimento.
+- HDBSCAN ajudou a detectar cenários discrepantes.
+- PyCaret automatizou seleção, treinamento e avaliação de múltiplos algoritmos.
+
+---
+
+## Como Executar
+## Como Executar
+1. Instale as dependências com `pip install numpy pandas matplotlib seaborn scikit-learn hdbscan pycaret`.
+2. Abra o notebook `Entrega1_Analise_Predicao.ipynb`.
+3. Execute as células na ordem apresentada para reproduzir a análise, clusterização e modelagem preditiva.
+
+# Entrega 2 – Estimativa de Custos na AWS
 
 ## 📜 Descrição
 
