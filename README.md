@@ -23,20 +23,20 @@
 ### Coordenador(a)
 - <a href="profandre.chiovato@fiap.com.br">André Godoi Chiovato</a>
 
-# Entrega 1 – Análise e Predição de Rendimento Agrícola
+# 🌾 Entrega 1 – Análise e Predição de Rendimento Agrícola
 
-## Descrição
-Este projeto tem como objetivo analisar dados de rendimento agrícola, identificar padrões e outliers, e construir modelos preditivos para estimar a produtividade das safras. O fluxo inclui análise exploratória, clusterização e modelagem preditiva com cinco algoritmos diferentes.
+## 📄 Descrição
+Este projeto tem como objetivo analisar dados de rendimento agrícola de plantações, buscando compreender os fatores que influenciam a produtividade das safras. O foco está na identificação de padrões, tendências e outliers nos dados, permitindo destacar cenários atípicos que podem afetar a produção agrícola. O fluxo de trabalho integra análise exploratória, clusterização e modelagem preditiva, oferecendo uma abordagem completa de ciência de dados aplicada ao contexto agrícola. Inicialmente, realiza-se a análise exploratória para investigar as características do dataset, incluindo estatísticas descritivas, visualizações de distribuições e relações entre variáveis, além da identificação de inconsistências ou valores discrepantes. Em seguida, aplicam-se técnicas de clusterização, como HDBSCAN, para agrupar observações com comportamentos semelhantes e detectar cenários fora do padrão, permitindo reconhecer padrões emergentes e segmentar diferentes perfis de rendimento. Por fim, são construídos cinco modelos preditivos distintos utilizando regressão, com pré-processamento, treinamento, validação e avaliação automatizados pelo PyCaret. O desempenho dos modelos é comparado por métricas como R², RMSE e MAE, garantindo a seleção de abordagens robustas para previsão da produtividade. Dessa forma, o projeto fornece uma solução completa para prever rendimento agrícola e apoiar decisões estratégicas na gestão das plantações.
 
 ---
 
-## Estrutura do Projeto
+## 🗂 Estrutura do Projeto
 - `crop_yield.csv` – Base de dados com informações sobre rendimento das plantações.
-- `Entrega1_Analise_Predicao.ipynb` – Notebook com código completo, visualizações e modelagem.
+- `treinamento_ia.ipynb` – Notebook com código completo, visualizações e modelagem.
 
 ---
 
-## Tecnologias e Bibliotecas
+## 🛠 Tecnologias e Bibliotecas
 - **Python 3**
 - Bibliotecas:
   - `numpy`
@@ -49,41 +49,40 @@ Este projeto tem como objetivo analisar dados de rendimento agrícola, identific
 
 ---
 
-## Etapas do Projeto
+## 🚀 Etapas do Projeto
 
-### 1. Análise Exploratória de Dados (EDA)
+### 1️⃣ Análise Exploratória de Dados (EDA)
 - Inspeção do dataset (`head`, `shape`, `columns`, `sample`).
 - Visualizações:
   - Pairplots para explorar relações entre variáveis.
   - Boxplots para identificar outliers.
 - Objetivo: compreender padrões, tendências e inconsistências nos dados.
 
-### 2. Clusterização e Identificação de Outliers
+### 2️⃣ Clusterização e Identificação de Outliers
 - Algoritmo: **HDBSCAN** aplicado a colunas numéricas.
 - Visualização de clusters para identificar agrupamentos naturais e outliers.
 
-### 3. Modelagem Preditiva
+### 3️⃣ Modelagem Preditiva
 - Pré-processamento automatizado com **PyCaret**.
 - Objetivo: prever a variável `Yield` (rendimento da safra).
 - Divisão treino/teste: 80/20.
 - Treinamento de cinco modelos de regressão distintos.
 
-### 4. Seleção e Avaliação dos Melhores Modelos
+### 4️⃣ Seleção e Avaliação dos Melhores Modelos
 - Métrica principal: **R² score**.
 - Outras métricas: **RMSE** e **MAE**.
 - Visualizações:
   - Gráficos de erro
   - Importância das variáveis
 
-### 5. Conclusão
+### 5️⃣ Conclusão
 - O fluxo completo permitiu identificar padrões, outliers e construir modelos robustos de previsão de rendimento.
 - HDBSCAN ajudou a detectar cenários discrepantes.
 - PyCaret automatizou seleção, treinamento e avaliação de múltiplos algoritmos.
 
 ---
 
-## Como Executar
-## Como Executar
+## ▶️ Como Executar
 1. Instale as dependências com `pip install numpy pandas matplotlib seaborn scikit-learn hdbscan pycaret`.
 2. Abra o notebook `Entrega1_Analise_Predicao.ipynb`.
 3. Execute as células na ordem apresentada para reproduzir a análise, clusterização e modelagem preditiva.
