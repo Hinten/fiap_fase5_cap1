@@ -52,8 +52,8 @@ Para isso, foi utilizada a **AWS Pricing Calculator** com a seguinte configuraç
 ---
 
 #### 📑 Exportações Oficiais da Calculadora AWS
-- [PDF Estimativa N. Virginia](exports/aws-n-virginia.pdf)
-- [PDF Estimativa São Paulo](exports/aws-sao-paulo.pdf)
+- [PDF Estimativa N. Virginia](assets/aws-n-virginia.pdf)
+- [PDF Estimativa São Paulo](assets/aws-sao-paulo.pdf)
 
 *(Esses PDFs foram gerados diretamente no **AWS Pricing Calculator**, garantindo a rastreabilidade dos valores apresentados.)*
 
