@@ -6,9 +6,9 @@
 
 <br>
 
-# Nome do projeto
+# Projeto: fiap_fase5_cap1
 
-## Nome do grupo
+## Atividade em Grupo: FIAP - 1TIAOB - 2025/1 - Fase5 Cap 1
 
 ## 👨‍🎓 Integrantes: 
 - <a href="">Alice C. M. Assis - RM 566233</a>
@@ -25,19 +25,31 @@
 
 # 🌾 Entrega 1 – Análise e Predição de Rendimento Agrícola
 
+#### 🎥 Vídeo Explicativo
+
+- **Entrega 1 (Machine Learning):** [https://www.youtube.com/watch?v=XXQaWhhLs8k](https://www.youtube.com/watch?v=XXQaWhhLs8k) *(não listado)*  
+
 ## 📄 Descrição
-Este projeto tem como objetivo analisar dados de rendimento agrícola de plantações, buscando compreender os fatores que influenciam a produtividade das safras. O foco está na identificação de padrões, tendências e outliers nos dados, permitindo destacar cenários atípicos que podem afetar a produção agrícola. O fluxo de trabalho integra análise exploratória, clusterização e modelagem preditiva, oferecendo uma abordagem completa de ciência de dados aplicada ao contexto agrícola. Inicialmente, realiza-se a análise exploratória para investigar as características do dataset, incluindo estatísticas descritivas, visualizações de distribuições e relações entre variáveis, além da identificação de inconsistências ou valores discrepantes. Em seguida, aplicam-se técnicas de clusterização, como HDBSCAN, para agrupar observações com comportamentos semelhantes e detectar cenários fora do padrão, permitindo reconhecer padrões emergentes e segmentar diferentes perfis de rendimento. Por fim, são construídos cinco modelos preditivos distintos utilizando regressão, com pré-processamento, treinamento, validação e avaliação automatizados pelo PyCaret. O desempenho dos modelos é comparado por métricas como R², RMSE e MAE, garantindo a seleção de abordagens robustas para previsão da produtividade. Dessa forma, o projeto fornece uma solução completa para prever rendimento agrícola e apoiar decisões estratégicas na gestão das plantações.
+
+Este projeto tem como objetivo analisar dados de rendimento agrícola de plantações, buscando compreender os fatores que influenciam a produtividade das safras. 
+O foco está na identificação de padrões, tendências e outliers nos dados, permitindo destacar cenários atípicos que podem afetar a produção agrícola. 
+O fluxo de trabalho integra análise exploratória, clusterização e modelagem preditiva, oferecendo uma abordagem completa de ciência de dados aplicada ao contexto agrícola. 
+Inicialmente, realiza-se a análise exploratória para investigar as características do dataset, incluindo estatísticas descritivas, visualizações de distribuições e relações entre variáveis, além da identificação de inconsistências ou valores discrepantes. 
+Em seguida, aplicam-se técnicas de clusterização, como HDBSCAN, para agrupar observações com comportamentos semelhantes e detectar cenários fora do padrão, permitindo reconhecer padrões emergentes e segmentar diferentes perfis de rendimento. 
+Por fim, são construídos cinco modelos preditivos distintos utilizando regressão, com pré-processamento, treinamento, validação e avaliação automatizados pelo PyCaret. O desempenho dos modelos é comparado por métricas como R², RMSE e MAE, garantindo a seleção de abordagens robustas para previsão da produtividade. 
+Dessa forma, o projeto fornece uma solução completa para prever rendimento agrícola e apoiar decisões estratégicas na gestão das plantações.
 
 ---
 
 ## 🗂 Estrutura do Projeto
-- `crop_yield.csv` – Base de dados com informações sobre rendimento das plantações.
-- `treinamento_ia.ipynb` – Notebook com código completo, visualizações e modelagem.
+- [crop_yield.csv](src/entrega_1/crop_yield.csv) – Base de dados com informações sobre rendimento das plantações.
+- [treinamento_ia.ipynb](src/entrega_1/treinamento_ia.ipynb) – Notebook com código completo, visualizações e modelagem.
+- [top_models](src/entrega_1/top_models) – Pasta contendo os cinco melhores modelos treinados.
 
 ---
 
 ## 🛠 Tecnologias e Bibliotecas
-- **Python 3**
+- **Python 3.11**
 - Bibliotecas:
   - `numpy`
   - `pandas`
@@ -46,6 +58,9 @@ Este projeto tem como objetivo analisar dados de rendimento agrícola de planta�
   - `scikit-learn`
   - `hdbscan`
   - `pycaret`  
+
+**ATENÇÃO**: Recomenda-se o uso de um ambiente virtual com Python na versão específica 3.11.x para a execução do Pycaret.
+Mais informações sobre a sua instalação, verificar na documentação do [Pycaret](https://pycaret.gitbook.io/docs/get-started/installation).
 
 ---
 
@@ -83,11 +98,15 @@ Este projeto tem como objetivo analisar dados de rendimento agrícola de planta�
 ---
 
 ## ▶️ Como Executar
-1. Instale as dependências com `pip install numpy pandas matplotlib seaborn scikit-learn hdbscan pycaret`.
-2. Abra o notebook `Entrega1_Analise_Predicao.ipynb`.
+1. Instale o Python na versão 3.11.x.
+2. Abra o notebook [treinamento_ia.ipynb](src/entrega_1/treinamento_ia.ipynb).
 3. Execute as células na ordem apresentada para reproduzir a análise, clusterização e modelagem preditiva.
 
 # Entrega 2 – Estimativa de Custos na AWS
+
+#### 🎥 Vídeo Explicativo
+
+- **Entrega 2 (AWS Cloud):** [https://www.youtube.com/watch?v=5PAdMoMSE8A](https://www.youtube.com/watch?v=5PAdMoMSE8A) *(não listado)*    
 
 ## 📜 Descrição
 
@@ -124,46 +143,49 @@ Para isso, foi utilizada a **AWS Pricing Calculator** com a seguinte configuraç
 
 ---
 
-#### 🎥 Vídeos Explicativos
-- **Entrega 1 (Machine Learning):** [Link do Vídeo no YouTube](URL_DO_VIDEO_AQUI) *(não listado)*  
-- **Entrega 2 (AWS Cloud):** [Link do Vídeo no YouTube](URL_DO_VIDEO_AQUI) *(não listado)*  
+# Ir Além 1 🌱 Sistema de Monitoramento de Estufa
+
+O grupo desenvolveu o Ir Além 1 solicitado, podendo ser encontrado na pasta [src/ir_alem_1](src/ir_alem_1).
+
+O Readme completo do Ir Além 1 pode ser encontrado em [src/ir_alem_1/README.md](src/ir_alem_1/README.md).
+
+#### 🎥 Vídeo Explicativo
+
+- **Ir Além 1 🌱 Sistema de Monitoramento de Estufa:** [https://www.youtube.com/watch?v=QsNpCC74HIo](https://www.youtube.com/watch?v=QsNpCC74HIo) *(não listado)*
+
+
+# Ir Além 2 🌱 Projeto de monitoramento inteligente de plantas
+
+O grupo desenvolveu o Ir Além 2 solicitado, podendo ser encontrado na pasta [src/ir_alem_2](src/ir_alem_2).
+
+O Readme completo do Ir Além 2 pode ser encontrado em [src/ir_alem_2/README.md](src/ir_alem_2/README.md).
+
+#### 🎥 Vídeo Explicativo
+
+- ** Ir Além 2 🌱 Projeto de monitoramento inteligente de plantas:** [https://www.youtube.com/watch?v=kxKfG09zvTg](https://www.youtube.com/watch?v=kxKfG09zvTg) *(não listado)*
 
 
 ## 📁 Estrutura de pastas
 
 Dentre os arquivos e pastas presentes na raiz do projeto, definem-se:
 
-- <b>.github</b>: Nesta pasta ficarão os arquivos de configuração específicos do GitHub que ajudam a gerenciar e automatizar processos no repositório.
+- <b>.streamlit</b>: Pasta que contém arquivos de configuração do Streamlit, como o tema da interface e a organização da barra lateral.
+- <b>assets</b>: Diretório destinado ao armazenamento de elementos não estruturados do projeto, como imagens e ícones utilizados no dashboard.
+- <b>packages</b>: Pasta que contém pacotes compartilhados utilizados no projeto.
+- <b>src</b>: Diretório principal que contém todo o código-fonte desenvolvido ao longo das fases do projeto. Ele está organizado nos seguintes submódulos:
+  - <b>entrega_1</b>: Contém o código e os notebooks relacionados à Análise e Predição de Rendimento Agrícola, incluindo a análise exploratória, clusterização e modelagem preditiva. ([entrega_1](src/entrega_1/))
+  - <b>entrega_2</b>: Contém os documentos e arquivos relacionados à Estimativa de Custos na AWS, incluindo as exportações oficiais da calculadora de preços da AWS. ([entrega_2](src/entrega_2/))
+  - <b>ir_alem_1</b>: Contém o código e os arquivos do projeto "Ir Além 1", que é um sistema de monitoramento de estufa utilizando ESP32, sensores ambientais. ([ir_alem_1](src/ir_alem_1/))
+  - <b>ir_alem_2</b>: Contém o código e os arquivos do projeto "Ir Além 2", que é um sistema de monitoramento inteligente de plantas utilizando ESP32, sensores ambientais, API em Python (FastAPI), dashboard interativo (Streamlit) e modelo de Machine Learning para previsão da saúde vegetal. ([ir_alem_2](src/ir_alem_2/))
+- <b>.env</b>: Arquivo de configuração que contém as chaves de API e outras variáveis de ambiente necessárias para o funcionamento do sistema. É necessário criar este arquivo na raiz do projeto, conforme orientações na seção "Arquivo de Configuração".
+- <b>.gitignore</b>: Arquivo que especifica quais arquivos e pastas devem ser ignorados pelo Git, evitando que informações sensíveis ou desnecessárias sejam versionadas. É importante garantir que o arquivo `.env` esteja incluído neste arquivo para evitar o upload de chaves de API e outras informações sensíveis.
+- <b>dashboard_ir_alem_2.py</b>: Arquivo principal do dashboard, responsável por iniciar a aplicação web interativa utilizando Streamlit.
+- <b>diagram.json</b>: Arquivo JSON que contém o diagrama de conexão dos sensores utilizados no projeto, facilitando a compreensão da arquitetura do sistema.
+- <b>platformio.ini</b>: Arquivo de configuração do PlatformIO, utilizado para definir as especificações do projeto embarcado com ESP32, incluindo as bibliotecas necessárias e as configurações de compilação.
+- <b>README</b>: Arquivo de documentação do projeto (este que está sendo lido), com orientações gerais, instruções de uso e contextualização.
+- <b>requirements.txt</b>: Arquivo que lista todas as dependências do projeto, necessário para a instalação do ambiente virtual. Deve ser utilizado com o comando `pip install -r requirements.txt` para instalar as bibliotecas necessárias.
+- <b>wokwi.toml</b>: Arquivo de configuração para simulação do ESP32 na plataforma Wokwi, permitindo testar o código embarcado sem a necessidade de hardware físico.
 
-- <b>assets</b>: aqui estão os arquivos relacionados a elementos não-estruturados deste repositório, como imagens.
-
-- <b>config</b>: Posicione aqui arquivos de configuração que são usados para definir parâmetros e ajustes do projeto.
-
-- <b>document</b>: aqui estão todos os documentos do projeto que as atividades poderão pedir. Na subpasta "other", adicione documentos complementares e menos importantes.
-
-- <b>scripts</b>: Posicione aqui scripts auxiliares para tarefas específicas do seu projeto. Exemplo: deploy, migrações de banco de dados, backups.
-
-- <b>src</b>: Todo o código fonte criado para o desenvolvimento do projeto ao longo das 7 fases.
-
-- <b>README.md</b>: arquivo que serve como guia e explicação geral sobre o projeto (o mesmo que você está lendo agora).
-
-## 🔧 Como executar o código
-
-*Acrescentar as informações necessárias sobre pré-requisitos (IDEs, serviços, bibliotecas etc.) e instalação básica do projeto, descrevendo eventuais versões utilizadas. Colocar um passo a passo de como o leitor pode baixar o seu código e executá-lo a partir de sua máquina ou seu repositório. Considere a explicação organizada em fase.*
-
-
-## 🗃 Histórico de lançamentos
-
-* 0.5.0 - XX/XX/2024
-    * 
-* 0.4.0 - XX/XX/2024
-    * 
-* 0.3.0 - XX/XX/2024
-    * 
-* 0.2.0 - XX/XX/2024
-    * 
-* 0.1.0 - XX/XX/2024
-    *
 
 ## 📋 Licença
 

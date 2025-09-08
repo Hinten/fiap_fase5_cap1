@@ -15,7 +15,7 @@ def prever_saude(request: LeituraRequest):
         Light_Intensity=request.lux,
     )
 
-    print(f"Previsão de saúde da planta: {"Saudável" if previsao == True else "Não Saudável"}")
+    print(f"Previsão de saúde da planta: {'Saudável' if previsao == True else 'Não Saudável'}")
 
     return {
         "saude": bool(previsao)

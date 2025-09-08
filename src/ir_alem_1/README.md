@@ -1,15 +1,17 @@
-# Greenhouse Monitoring System
+# Ir Além 1
 
-**Summary**: This project implements a greenhouse monitoring system using an ESP32 microcontroller. It collects temperature and humidity data from a DHT22 sensor and soil moisture data from an analog sensor. The system connects to Wi-Fi and serves an HTML dashboard that updates automatically to display the collected data.
+## 🌱 Sistema de Monitoramento de Estufa
 
-## Project Structure
-```
+#### 🎥 Vídeo Explicativo
 
-# Sistema de Monitoramento de Estufa
+- **Ir Além 1 🌱 Sistema de Monitoramento de Estufa:** [https://www.youtube.com/watch?v=QsNpCC74HIo](https://www.youtube.com/watch?v=QsNpCC74HIo) *(não listado)*
 
-Este projeto utiliza um ESP32 e um sensor DHT11 para coletar dados de temperatura e umidade do ar, disponibilizando essas informações em tempo real através de um dashboard web acessível pela rede Wi-Fi.
 
-## Estrutura do Projeto
+Este projeto implementa um sistema de monitoramento para estufas utilizando o microcontrolador ESP32. Ele coleta dados de **temperatura** e **umidade do ar** através do sensor DHT11, disponibilizando essas informações em tempo real por meio de um dashboard web acessível via Wi-Fi.
+
+---
+
+### 📁 Estrutura do Projeto
 
 ```
 ir_alem_1
@@ -27,33 +29,40 @@ ir_alem_1
 ├── LICENSE                         # Licença
 ```
 
-## Funcionalidades
+---
 
-- Mede temperatura e umidade do ar usando o sensor DHT11.
-- Conecta o ESP32 à rede Wi-Fi.
-- Disponibiliza um dashboard web com atualização automática dos dados.
+### 🚀 Funcionalidades
 
-## Como Utilizar
+- 📡 Mede temperatura e umidade do ar usando o sensor DHT11
+- 🌐 Conecta o ESP32 à rede Wi-Fi
+- 📊 Disponibiliza um dashboard web com atualização automática dos dados
 
-1. **Monte o circuito:**
-	- Conecte o DHT11 ao ESP32 (VCC, GND e DATA no pino definido em `sensors.h`).
-2. **Configure o Wi-Fi:**
-	- Edite o arquivo `src/config/wifi_credentials.h` com o nome e senha da sua rede Wi-Fi.
-3. **Compile e envie o código para o ESP32:**
-	- No VS Code, clique em "Upload" no menu do PlatformIO.
-4. **Envie o dashboard para o ESP32:**
-	- Coloque o arquivo `dashboard.html` na pasta `data`.
-	- Clique em "Upload Filesystem Image" no menu do PlatformIO para gravar o arquivo no SPIFFS do ESP32.
-5. **Acesse o dashboard:**
-	- Após o ESP32 conectar ao Wi-Fi, veja o IP no monitor serial.
-	- No navegador, acesse `http://<IP_DO_ESP32>/dashboard.html`.
+---
 
-## Observações
+### ⚙️ Como Funciona
 
-- O dashboard atualiza os dados automaticamente a cada 2 segundos.
-- O ESP32 precisa estar na mesma rede Wi-Fi do dispositivo que acessa o dashboard.
-- Se quiser adicionar mais sensores, basta criar novas funções e rotas.
+1. O ESP32 conecta-se à rede Wi-Fi configurada.
+2. Os sensores coletam dados ambientais periodicamente.
+3. Um servidor web integrado exibe os dados em tempo real em um dashboard acessível por qualquer dispositivo na mesma rede.
 
-## Licença
+---
 
-Este projeto está sob a licença MIT. Veja o arquivo LICENSE para mais detalhes.
+### 📦 Requisitos
+
+- ESP32
+- Sensor DHT11
+- PlatformIO instalado
+
+---
+
+### 👨‍💻 Como Executar
+
+1. Configure o arquivo `wifi_credentials.h` com o SSID e senha da sua rede Wi-Fi.
+2. Faça o upload do código para o ESP32 usando o PlatformIO.
+3. Acesse o dashboard pelo endereço IP exibido no monitor serial após a conexão.
+
+---
+
+### 📄 Licença
+
+Este projeto está licenciado sob os termos do arquivo [LICENSE](./LICENSE).
