@@ -136,6 +136,12 @@ Para isso, foi utilizada a **AWS Pricing Calculator** com a seguinte configuraç
 ---
 
 #### 📑 Exportações Oficiais da Calculadora AWS
+
+<p align="center">
+  <img src="assets/estimativa_entrega_2.JPG" alt="Circuito Sensor" border="0" width=70% height=70%>
+</p>
+
+
 - [PDF Estimativa N. Virginia](src/entrega_2/aws-n-virginia.pdf)
 - [PDF Estimativa São Paulo](src/entrega_2/aws-sao-paulo.pdf)
 
