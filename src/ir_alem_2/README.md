@@ -1,5 +1,10 @@
 # Ir Além 2 - 🌱 Projeto de monitoramento inteligente de plantas
 
+#### 🎥 Vídeo Explicativo
+
+- ** Ir Além 2 🌱 Projeto de monitoramento inteligente de plantas:** [https://www.youtube.com/watch?v=kxKfG09zvTg](https://www.youtube.com/watch?v=kxKfG09zvTg) *(não listado)*
+
+
 Projeto de monitoramento inteligente de plantas utilizando ESP32, sensores ambientais, API em Python (FastAPI), dashboard interativo (Streamlit) e modelo de Machine Learning para previsão da saúde vegetal.
 
 ## Descrição
